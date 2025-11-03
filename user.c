@@ -10,7 +10,7 @@ static int __init user_init(void) {
   pr_info("%s", MY_NAME);
   pr_info("\n");
 
-  return trivial_sub(1, 0);
+  return trivial_sub(1, 1);
 }
 
 static void __exit user_exit(void) { pr_info("Goodbye World.\n"); }

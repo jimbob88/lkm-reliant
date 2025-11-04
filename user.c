@@ -1,8 +1,6 @@
+#include "provider.h"
 #include <linux/init.h>
 #include <linux/module.h>
-
-extern int trivial_sub(int, int);
-extern char MY_NAME[];
 
 static int __init user_init(void) {
   pr_info("Hello World.\n");

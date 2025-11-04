@@ -1,6 +1,8 @@
 #include <linux/init.h>
 #include <linux/module.h>
 
+#include "provider.h"
+
 const char MY_NAME[] = "James Blackburn";
 
 EXPORT_SYMBOL(MY_NAME);

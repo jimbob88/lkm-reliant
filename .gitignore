@@ -5,3 +5,9 @@ modules.order
 Module.symvers
 .*.cmd
 .*.d
+
+# Clangd configuration
+compile_commands.json
+*.plist
+.cache/
+.clangd

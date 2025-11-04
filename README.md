@@ -28,3 +28,26 @@ sudo insmod user.ko
 sudo rmmod user.ko
 sudo rmmod provider.ko
 ```
+
+### `clangd`
+
+When using an LSP in Vim, it is possible to generate useful compile information.
+
+#### Compile Commands JSON
+
+This can be generated from the kernel source itself (it can be very large) or by using [Bear](https://github.com/rizsotto/Bear).
+
+```console
+make clean
+bear -- make
+```
+
+#### Ignore `gcc` parameters
+
+`clangd`, by defaults, warns at the use of `gcc`-specific parameters. For the sake of the LSP, we can ignore these problems, using the following `.clangd` file (taken from [this comment](https://github.com/clangd/clangd/issues/662#issuecomment-1447233948)).
+
+```clangd
+CompileFlags:
+  Add: -Wno-unknown-warning-option
+  Remove: [-m*, -f*]
+```

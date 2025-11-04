@@ -18,3 +18,4 @@ module_init(user_init);
 module_exit(user_exit);
 
 MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Uses the defined externs from provider.c");

@@ -23,3 +23,5 @@ module_init(provider_init);
 module_exit(provider_exit);
 
 MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION(
+    "Provides a constant string and a trivial subtraction function to user.c");
